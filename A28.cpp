@@ -20,33 +20,33 @@ int main() {
 
 	// cikls, kas nosaka, lai programma atkārtotos
 	do {
-		int skaitlis;
+		int n;
 
 		cout << "Ievadiet naturālo skaitli: " << endl;
-		cin >> skaitlis;
+		cin >> n;
 
 		// cikls, kur tiek parbaudīts, vai ir ievadīts naturāls skaitlis
-		while (skaitlis < 0 || cin.fail()) {
+		while (n < 0 || cin.fail()) {
 			cout << "Ievadītie dati nav korekti. \nIevadiet naturālo skaitli: " << endl;
 
 			cin.clear();
 			cin.ignore(INT_MAX, '\n');
 
-			cin >> skaitlis;
+			cin >> n;
 		}
 
 		// mainīgais atlikumam, kas būs nepieciešams aprēķinos, un gala rezultātam
 		int atlikums = 0,
-			simetrisksSkaitlis = 0;
+			simetrisksN = 0;
 
 		// aprēķinu bloks, kur skaitlis dalās ar 10 un ar atlikumu palīdzību pārvēršas par simetrisku skaitli
-		while (skaitlis != 0) {
-			atlikums = skaitlis % 10;
-			simetrisksSkaitlis = simetrisksSkaitlis * 10 + atlikums;
-			skaitlis /= 10;
+		while (n != 0) {
+			atlikums = n % 10;
+			simetrisksN = simetrisksN * 10 + atlikums;
+			n /= 10;
 		}
 
-		cout << "Simetrisks skaitlis ir " << simetrisksSkaitlis << "." << endl << endl;
+		cout << "Simetrisks skaitlis ir " << simetrisksN << "." << endl << endl;
 
 		cout << "Vai turpināt (1) vai beigt (0)?" << endl;
 		cin >> iziet;

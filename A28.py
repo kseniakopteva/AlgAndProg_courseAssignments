@@ -9,31 +9,31 @@
 #	| Programma izveidota : 2021 / 09 / 15              |
 #	+---------------------------------------------------+
 
-skaitlis = 0
+n = 0
 
 # cikls, kas nosaka, lai programma atkārtotos
 while True:
 
     # cikls, kur tiek parbaudīts, vai ir ievadīts naturāls skaitlis
     while True:
-        skaitlis = input("Ievadiet naturālo skaitli: \n")
-        if skaitlis.isdigit():
-            int(skaitlis)
+        n = input("Ievadiet naturālo skaitli: \n")
+        if n.isdigit():
+            int(n)
             break
         else:
             print("Ievadītie dati nav korekti. ", )
 
     # mainīgais atlikumam, kas būs nepieciešams aprēķinos, un gala rezultātam
     atlikums = 0
-    simetrisks_skaitlis = 0
+    simetrisks_n = 0
 
     # aprēķinu bloks, kur skaitlis dalās ar 10 un ar atlikumu palīdzību pārvēršas par simetrisku skaitli
-    while skaitlis != 0:
-        atlikums = int(skaitlis) % 10
-        simetrisks_skaitlis = int(simetrisks_skaitlis) * 10 + int(atlikums)
-        skaitlis = int(int(skaitlis) / 10)
+    while n != 0:
+        atlikums = int(n) % 10
+        simetrisks_n = int(simetrisks_n) * 10 + int(atlikums)
+        n = int(int(n) / 10)
 
-    print("Simetrisks skaitlis ir {}.\n".format(simetrisks_skaitlis))
+    print("Simetrisks skaitlis ir {}.\n".format(simetrisks_n))
 
     iziet = input("Vai turpināt (1) vai beigt (0)?\n")
     if int(iziet) != 1:
