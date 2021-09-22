@@ -31,7 +31,7 @@ while True:
     while n != 0:
         atlikums = int(n) % 10
         simetrisks_n = int(simetrisks_n) * 10 + int(atlikums)
-        n = int(int(n) / 10)
+        n = int(n) // 10
 
     print("Simetrisks skaitlis ir {}.\n".format(simetrisks_n))
 
